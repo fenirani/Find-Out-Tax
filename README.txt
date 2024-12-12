@@ -1,0 +1,1 @@
+Simple GUI project that seperates tax from a total sale.
