@@ -9,5 +9,8 @@ prompt.pack()
 userEntry = tk.Entry()
 userEntry.pack()
 
+''' TO DO
+Retrieve information from user, calculate, and return information as a tkinter widget
+'''
 
 window.mainloop()
