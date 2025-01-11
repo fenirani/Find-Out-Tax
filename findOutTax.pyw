@@ -18,6 +18,7 @@ def submit():
 #.pyw extension so that the command line doesn't open as well as the app.
 window = tk.Tk()
 window.geometry("400x400")
+window.title("Seperate The Tax")
 
 prompt_Label  = tk.Label( text= " Enter amount: $ ")
 prompt_Label.pack(pady=25)
