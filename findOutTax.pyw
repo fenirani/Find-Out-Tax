@@ -7,8 +7,16 @@ def calculate(amount):
     beforeTax = round(amount / (1 + tax), 2 ) 
     return beforeTax
 
-def submit(self):  # Self added so that 'window.bind('<Return>',submit)' would work
+def submit():  
     '''Calls calculate function and then uses its value to 'configure' a tKinter label widget ''' 
+    beforeTax= calculate(float(user_Entry.get()))
+
+    directions_Label.config(text = "ENTER THIS AMOUNT:")
+    beforeTax_Label.config(text=beforeTax)
+
+def enterPressed(self):  # Self added so that 'window.bind('<Return>',submit)' would work
+    '''Calls calculate function and then uses its value to 'configure' a tKinter label widget ''' 
+    ''' Same as function above'''
     beforeTax= calculate(float(user_Entry.get()))
 
     directions_Label.config(text = "ENTER THIS AMOUNT:")
@@ -28,7 +36,7 @@ user_Entry.pack(pady=10)
 
 button_Submit = tk.Button( text= "Submit", command=submit, background= "blue", foreground="white", font=("",25))
 button_Submit.pack(pady=20)
-window.bind('<Return>',submit) # Bind 'Enter' key to the same function as button above. 
+window.bind('<Return>',enterPressed) # Bind 'Enter' key to the same function as button above. 
 
 directions_Label = tk.Label()
 directions_Label.pack()
